@@ -111,6 +111,9 @@ Inotel supports automated workflows created with Node-RED. Explore the predefine
 Access the real-time dashboard at [http://localhost:1880](Dashboard) to monitor key metrics and visualize data.
 Feel free to explore and customize the functionalities based on your hotel's needs( Rooms , Profiles , Staff , Services , ......).
 
+**InoBot ( The integrated chatbot)**
+we have implemented a chatbot which can help the guests by answering their questions about the hotel by using an API which provides smooth and understandable discussion between the bot and the guest.
+
 ## 6.API Reference:
  ### Add Profile:
  **Method:**'POST' <br />
