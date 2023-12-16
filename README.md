@@ -317,7 +317,28 @@
  **Endpoint:**'/room' <br />
  **Parameters:**  <br />
  **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/room <br />
- **Response:** Profile Added ! <br />
+ **Response:** 
+   ```json
+[
+    {
+        "name": "Suite",
+        "roomnb": 2,
+        "bednb": 3,
+        "services": "WiFi, TV, Mini Bar, Sea View, Kitchen",
+        "price": 300,
+        "available_rooms": 1
+    },
+    {
+        "name": "Double Room",
+        "roomnb": 1,
+        "bednb": 2,
+        "services": "WiFi, TV, Mini Bar, Sea View",
+        "price": 200,
+        "available_rooms": 1
+    }
+]
+ ```
+<br />
 
  ### Add Booking:
  **Method:**'POST' <br />
