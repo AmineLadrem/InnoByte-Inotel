@@ -5,7 +5,6 @@ import {
   Sidenav,
   DashboardNavbar,
   Configurator,
-  Footer,
 } from "@/widgets/layout";
 import routes from "@/routes";
 import { useMaterialTailwindController, setOpenConfigurator } from "@/context";
@@ -43,9 +42,6 @@ export function Dashboard() {
               ))
           )}
         </Routes>
-        <div className="text-blue-gray-600">
-          <Footer />
-        </div>
       </div>
     </div>
   );

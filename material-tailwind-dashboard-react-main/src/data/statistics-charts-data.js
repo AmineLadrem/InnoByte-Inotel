@@ -104,27 +104,42 @@ const completedTasksChart = {
   ],
 };
 
+const chambersChart = {
+  type: "pie",
+  height: 250,
+  series: [40, 60], // Example data for the pie chart
+  options: {
+    ...chartsConfig,
+    labels: ["Reserved chambers", "Available chambers"], // Labels for each segment
+    colors: ["#FF9800", "#2196F3", ], // Colors for each segment
+    legend: {
+      show: true,
+      position: "bottom",
+    },
+  },
+};
+
 export const statisticsChartsData = [
   {
     color: "white",
-    title: "Website View",
-    description: "Last Campaign Performance",
+    title: "Chambers Stats",
+    description: "Available chambers",
     footer: "campaign sent 2 days ago",
+    chart: chambersChart,
+  },
+  {
+    color: "white",
+    title: "Daily Reservation",
+    description: "15% increase in today sales",
+    footer: "updated 4 min ago",
     chart: websiteViewsChart,
   },
   {
     color: "white",
-    title: "Daily Sales",
-    description: "15% increase in today sales",
-    footer: "updated 4 min ago",
-    chart: dailySalesChart,
-  },
-  {
-    color: "white",
-    title: "Completed Tasks",
-    description: "Last Campaign Performance",
+    title: "Funds",
+    description: "Last funds per month",
     footer: "just updated",
-    chart: completedTasksChart,
+      chart: completedTasksChart,
   },
 ];
 

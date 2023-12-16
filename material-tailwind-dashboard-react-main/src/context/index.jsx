@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const MaterialTailwind = React.createContext(null);
+export const MaterialTailwind = React.createContext();
 MaterialTailwind.displayName = "MaterialTailwindContext";
 
 export function reducer(state, action) {
+  console.log(action);
   switch (action.type) {
     case "OPEN_SIDENAV": {
       return { ...state, openSidenav: action.value };
@@ -24,6 +25,9 @@ export function reducer(state, action) {
     case "OPEN_CONFIGURATOR": {
       return { ...state, openConfigurator: action.value };
     }
+    case "SET_USER": {
+      return { ...state, user: action.value };
+    }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
     }
@@ -38,6 +42,7 @@ export function MaterialTailwindControllerProvider({ children }) {
     transparentNavbar: true,
     fixedNavbar: false,
     openConfigurator: false,
+    user: "null2", 
   };
 
   const [controller, dispatch] = React.useReducer(reducer, initialState);
@@ -83,3 +88,5 @@ export const setFixedNavbar = (dispatch, value) =>
   dispatch({ type: "FIXED_NAVBAR", value });
 export const setOpenConfigurator = (dispatch, value) =>
   dispatch({ type: "OPEN_CONFIGURATOR", value });
+export const setUserInfo = (dispatch, value) => 
+  dispatch({ type: "SET_USER", value })

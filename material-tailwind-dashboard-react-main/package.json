@@ -5,18 +5,23 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "serve": "your-serve-command",
+    "start": "your-start-command",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "@heroicons/react": "2.0.18",
+    "@hookform/resolvers": "^3.3.2",
     "@material-tailwind/react": "2.1.4",
     "apexcharts": "3.44.0",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-apexcharts": "1.4.1",
     "react-dom": "18.2.0",
-    "react-router-dom": "6.17.0"
+    "react-hook-form": "^7.49.2",
+    "react-router-dom": "^6.21.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/react": "18.2.31",
