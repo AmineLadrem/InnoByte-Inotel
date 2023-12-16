@@ -219,7 +219,7 @@ class _QRViewExampleState extends State<QRViewExample> {
   Future<void> _sendPostRequest(String url) async {
     try {
       final response = await http.post(
-        Uri.parse('http://192.168.0.6:1880/staffcheckin'),
+        Uri.parse('https://1eba-197-204-147-131.ngrok-free.app/staffcheckin'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({'staff_id': staff_id}),
       );

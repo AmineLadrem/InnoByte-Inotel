@@ -18,7 +18,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     Future<void> _login(
         BuildContext context, String username, String password) async {
-      final url = Uri.parse('http://192.168.0.6:1880/stafflogin');
+      final url = Uri.parse('https://1eba-197-204-147-131.ngrok-free.app/stafflogin');
       print('button pressed');
       try {
         final response = await http.post(
