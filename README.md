@@ -2,16 +2,116 @@
 ![alt text](https://github.com/AmineLadrem/MCoders-Inotel/blob/main/Booking/assets/logo3.png?raw=true)
  ## 1.Overview
    Hello and welcome to Inotel's documentation! We're here to make your experience as smooth as possible. 
-    Whether you're exploring our booking features, understanding booking synchronization, or getting the hang of HR management, this documentation is your guide to success.
+    Whether you're exploring our booking features, understanding booking synchronization, or getting the hang of HR management by our ERP system, this documentation is your guide to success.So, we have made 2 web application ( Dashboard dedicated for the management of the hotel , Booking website for guests to book rooms with a integrated chatbot which helps them , and a mobile application for hotel's staff ), Server which provides RESTful APIs for the hotel's software and other booking websites with MySQL database.
   ### Booking Made Easy
-   Manage reservations, check-ins, and check-outs effortlessly. Our system is designed for flexibility, making guest interactions and staff workflows a breeze.
+   Manage reservations, check-ins, and check-outs effortlessly. Our system is designed for flexibility, making guest interactions and staff workflows a breeze. As part of our commitment to enhancing your experience, we've implemented a chatbot to answer guest questions promptly, adding an extra layer of support to make the booking process even more straightforward.
   ### Seamless Synchronization
    Even if the network connection drops, our system ensures uninterrupted service. We've got smart synchronization to handle any bumps in the road.
   ### Effortless HR Management
    Streamline HR tasks with ease. Handle staff profiles, attendance, and assignments seamlessly to keep your workforce organized and productive.
 
+## 2.Installation:
+To get Inotel up and running on a Windows environment, follow these steps to set up your server. This process involves installing Node-RED, MySQL, and other dependencies.
+### Step 1: Install Node-RED
+Inotel relies on Node-RED for its flexibility and automation capabilities. Follow these steps to install Node-RED:
+1. **Install Node.js:**
+   Download and install Node.js from the official website: [Node.js Download](https://nodejs.org/)
 
-## 5.API Reference:
+2. **Install Node-RED:**
+   Open a command prompt and run the following command to install Node-RED globally:
+```bash
+   npm install -g --unsafe-perm node-red
+```
+
+### Step 2: Install MySQL
+Inotel uses MySQL to manage its database. Follow these steps to install MySQL:
+
+**1.Download MySQL Installer:**
+Download the MySQL Installer from the official website:  [MySQL Installer Download](https://dev.mysql.com/downloads/installer/)
+
+**2.Run MySQL Installer:**
+Run the MySQL Installer and follow the installation wizard to install MySQL Server.
+
+**3.Configure MySQL:**
+During the installation, set up a root password and create a user for Inotel. Take note of the database name, username, and password.
+
+### Step 3: Install Other Dependencies
+Depending on your system, you might need to install additional dependencies. No specific dependencies are required for a standard Windows environment.
+
+### Step 4: Install Inotel
+**1.Clone the Inotel Repository:**
+Open a command prompt and run the following commands to clone the Inotel repository from GitHub:
+```bash
+  git clone https://github.com/AmineLadrem/MCoders-Inotel
+cd inotel
+```
+
+**2. Dependencies:**
+Run the following command to install the required Node.js packages:
+```bash
+ npm install
+```
+
+
+### Step 5: Configure Inotel
+Follow the instructions in the Configuration section to set up and configure Inotel according to your hotel's requirements.
+
+Congratulations! Your Inotel server is now set up and ready to go.
+
+## 4.Configuration
+Configuring your Inotel setup involves a straightforward process. Follow these steps to set up the MySQL-node in Node-RED with the necessary credentials and initiate both the Node-RED server and the React-based website.
+
+**MySQL-node Configuration in Node-RED**
+1. **Open Node-RED:**
+   Access the Node-RED interface either through your web browser at [http://localhost:1880](http://localhost:1880) or using the specified URL with port **1880**.
+
+2. **Add MySQL-node:**
+   Drag and drop the MySQL-node onto the Node-RED workspace.
+
+3. **Configure MySQL-node:**
+   Double-click on the MySQL-node to open its configuration window. Enter the required details:
+   - **Hostname:** localhost (or the address of your MySQL server)
+   - **Port:** The port on which your MySQL server is running (default is 3306)
+   - **Database:** Specify the name of your Inotel database
+   - **User:** Enter the MySQL username for Inotel
+   - **Password:** Provide the corresponding password for the user
+
+4. **Deploy Changes:**
+   Click the "Deploy" button in Node-RED to apply the changes.
+
+### Subsequent Configurations
+For subsequent configurations to run Node-RED and the React-based website: Execute the file **myscript.bat** which is located in the main directory of the project.
+You've now completed the initial configuration by setting up Node-RED with the MySQL-node. For subsequent configurations, simply run Node-RED and the React-based website as needed.
+**Server**-->[http://localhost:1880](http://localhost:1880)
+**Website**-->[http://localhost:3000](http://localhost:3000)
+
+## 5.Usage:
+Now that your Inotel server is up and running, let's explore how users can interact with it. This section provides details on running the server, utilizing APIs, and other key functionalities.
+### Running the server and the website :
+Mentionned in Subsequent Configurations section ↑↑↑↑↑↑↑
+
+### Exploring APIs
+Inotel provides a set of APIs to interact with various features. Below are examples of how to use some of the key APIs:
+**Retrieve Rooms Informations:**
+Use the following API endpoint to get all informations about rooms:
+```bash
+ GET /roomlist
+```
+
+**Book an Available Room**
+To create a new booking, use the following API endpoint:
+```bash
+ POST /reservation
+```
+### Additional Functionality
+**Automated Workflows:**
+Inotel supports automated workflows created with Node-RED. Explore the predefined workflows or create custom ones to enhance your hotel management processes.
+
+**Real-time Dashboard:**
+Access the real-time dashboard at [http://localhost:1880](Dashboard) to monitor key metrics and visualize data.
+Feel free to explore and customize the functionalities based on your hotel's needs( Rooms , Profiles , Staff , Services , ......).
+
+## 6.API Reference:
  ### Add Profile:
  **Method:**'POST' <br />
  **Endpoint:**'/addprofile' <br />
