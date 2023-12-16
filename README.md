@@ -1,5 +1,5 @@
 # Inotel - Team MCoders
-![alt text](https://github.com/AmineLadrem/MCoders-Inotel/blob/main/Booking/assets/logo3.png?raw=true)
+![alt text](https://github.com/AmineLadrem/MCoders-Inotel/blob/main/Staff/assets/logo3.png?raw=true)
  ## 1.Overview
    Hello and welcome to Inotel's documentation! We're here to make your experience as smooth as possible. 
     Whether you're exploring our booking features, understanding booking synchronization, or getting the hang of HR management by our ERP system, this documentation is your guide to success.So, we have made 2 web application ( Dashboard dedicated for the management of the hotel , Booking website for guests to book rooms with a integrated chatbot which helps them , and a mobile application for hotel's staff ), Server which provides RESTful APIs for the hotel's software and other booking websites with MySQL database.
