@@ -200,51 +200,143 @@
  **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/stafflogin <br />
  **Response:** Profile Added ! <br />
 
- ### Add Profile:
+ ### Add Room:
  **Method:**'POST' <br />
- **Endpoint:**'/addprofile' <br />
- **Parameters:** id , desc ( description of the profile ) <br />
- **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/addprofile <br />
+ **Endpoint:**'/addroom' <br />
+ **Parameters:** id , name , roomnb( how many rooms in the main room ) , bednb ( how many beds in the room ) ,price <br />
+ **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/addroom <br />
+ **Response:** Room Added ! <br />
+
+ ### Delete Room:
+ **Method:**'DELETE' <br />
+ **Endpoint:**'/deleteroom' <br />
+ **Parameters:** id <br />
+ **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/deleteroom <br />
+ **Response:** Room Deleted ! <br />
+
+ ### Retrieve Room List:
+ **Method:**'GET' <br />
+ **Endpoint:**'/roomlist' <br />
+ **Parameters:**  <br />
+ **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/roomlist <br />
+  **Response:** 
+  ```json
+[
+    {
+        "room_id": 1,
+        "room_type": "Single Room",
+        "status": 1,
+        "price": 100
+    },
+    {
+        "room_id": 4,
+        "room_type": "Single Room",
+        "status": 1,
+        "price": 100
+    },
+    {
+        "room_id": 7,
+        "room_type": "Single Room",
+        "status": 4,
+        "price": 100
+    },
+    {
+        "room_id": 10,
+        "room_type": "Single Room",
+        "status": 1,
+        "price": 100
+    },
+    {
+        "room_id": 2,
+        "room_type": "Double Room",
+        "status": 1,
+        "price": 200
+    },
+    {
+        "room_id": 5,
+        "room_type": "Double Room",
+        "status": 2,
+        "price": 200
+    },
+    {
+        "room_id": 8,
+        "room_type": "Double Room",
+        "status": 3,
+        "price": 200
+    },
+    {
+        "room_id": 3,
+        "room_type": "Suite",
+        "status": 4,
+        "price": 300
+    },
+    {
+        "room_id": 6,
+        "room_type": "Suite",
+        "status": 3,
+        "price": 300
+    },
+    {
+        "room_id": 9,
+        "room_type": "Suite",
+        "status": 5,
+        "price": 300
+    }
+]
+ ```
+ <br />
+
+ ### Add Rating:
+ **Method:**'POST' <br />
+ **Endpoint:**'/ratingpost' <br />
+ **Parameters:** firstname , lastname , email , feedback <br />
+ **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/ratingpost <br />
+ **Response:** Feedback Sent ! <br />
+
+ ### Retrieve Ratings:
+ **Method:**'GET' <br />
+ **Endpoint:**'/ratinglist' <br />
+ **Parameters:**  <br />
+ **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/ratinglist <br />
+ **Response:** 
+   ```json
+[
+    {
+        "id": 1,
+        "firstname": "Amine",
+        "lastname": "Ladrem",
+        "email": "awpxrr@gmail.com",
+        "feedback": "Great Hotel !"
+    }
+]
+ ```
+<br />
+
+ ### Available Rooms List:
+ **Method:**'GET' <br />
+ **Endpoint:**'/room' <br />
+ **Parameters:**  <br />
+ **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/room <br />
  **Response:** Profile Added ! <br />
 
- ### Add Profile:
+ ### Add Booking:
  **Method:**'POST' <br />
- **Endpoint:**'/addprofile' <br />
- **Parameters:** id , desc ( description of the profile ) <br />
- **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/addprofile <br />
- **Response:** Profile Added ! <br />
+ **Endpoint:**'/reservation' <br />
+ **Parameters:**roomTypeId,roomId,status,firstname,lastname,bday,email,phone,typeIdCard,idCard,checkin,checkout <br />
+ **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/reservation <br />
+ **Response:** The room has been booked !  || The room is  already booked !<br />
 
- ### Add Profile:
+ ### Add Report:
  **Method:**'POST' <br />
- **Endpoint:**'/addprofile' <br />
- **Parameters:** id , desc ( description of the profile ) <br />
- **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/addprofile <br />
- **Response:** Profile Added ! <br />
+ **Endpoint:**'/reporting' <br />
+ **Parameters:**firstname,lastname,email,report <br />
+ **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/reporting <br />
+ **Response:** The problem has been reported to administration of the hotel !<br />
 
- ### Add Profile:
- **Method:**'POST' <br />
- **Endpoint:**'/addprofile' <br />
- **Parameters:** id , desc ( description of the profile ) <br />
- **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/addprofile <br />
- **Response:** Profile Added ! <br />
 
- ### Add Profile:
+ ### Reception-Booking:
  **Method:**'POST' <br />
- **Endpoint:**'/addprofile' <br />
- **Parameters:** id , desc ( description of the profile ) <br />
- **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/addprofile <br />
- **Response:** Profile Added ! <br />
-
- ### Add Profile:
- **Method:**'POST' <br />
- **Endpoint:**'/addprofile' <br />
- **Parameters:** id , desc ( description of the profile ) <br />
- **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/addprofile <br />
- **Response:** Profile Added ! <br />
-
- ### Add Profile:
- **Method:**'POST' <br />
- **Endpoint:**'/addprofile' <br />
- **Parameters:** id , desc ( description of the profile ) <br />
- **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/addprofile <br />
- **Response:** Profile Added ! <br />
+ **Endpoint:**'/makebook' <br />
+ **Parameters:**roomTypeId,roomId,status,firstname,lastname,bday,email,phone,typeIdCard,idCard,checkin,checkout <br />
+ **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/makebook <br />
+ **Response:** The room has been booked !  || The room is  already booked !<br />
