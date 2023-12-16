@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:booking/home.dart';
-import 'package:booking/settings.dart';
-import 'package:booking/task.dart';
+import 'package:staff/home.dart';
+import 'package:staff/settings.dart';
+import 'package:staff/task.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 import 'package:fluttertoast/fluttertoast.dart';

@@ -1,5 +1,5 @@
-import 'package:booking/login.dart';
-import 'package:booking/staff.dart';
+import 'package:staff/login.dart';
+import 'package:staff/staff.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 

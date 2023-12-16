@@ -1,6 +1,6 @@
-import 'package:booking/settings.dart';
-import 'package:booking/staff.dart';
-import 'package:booking/task.dart';
+import 'package:staff/settings.dart';
+import 'package:staff/staff.dart';
+import 'package:staff/task.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {

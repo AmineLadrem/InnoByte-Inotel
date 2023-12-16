@@ -1,5 +1,5 @@
-import 'package:booking/home.dart';
-import 'package:booking/staff.dart';
+import 'package:staff/home.dart';
+import 'package:staff/staff.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
@@ -18,7 +18,8 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     Future<void> _login(
         BuildContext context, String username, String password) async {
-      final url = Uri.parse('https://1eba-197-204-147-131.ngrok-free.app/stafflogin');
+      final url =
+          Uri.parse('https://1eba-197-204-147-131.ngrok-free.app/stafflogin');
       print('button pressed');
       try {
         final response = await http.post(
