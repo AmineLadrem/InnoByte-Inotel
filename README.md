@@ -195,9 +195,9 @@
 
  ### Staff Login:
  **Method:**'POST' <br />
- **Endpoint:**'/addprofile' <br />
- **Parameters:** id , desc ( description of the profile ) <br />
- **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/addprofile <br />
+ **Endpoint:**'/stafflogin' <br />
+ **Parameters:** username,password <br />
+ **Request Example:** https://1eba-197-204-147-131.ngrok-free.app/stafflogin <br />
  **Response:** Profile Added ! <br />
 
  ### Add Profile:
